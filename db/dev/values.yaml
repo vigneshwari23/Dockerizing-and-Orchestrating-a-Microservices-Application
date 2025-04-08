@@ -12,7 +12,7 @@ db:
   configmap:
     ## KEY: "value"
     MYSQL_DATABASE: wordpress
-    MYSQL_USER: wordpress
+    MYSQL_USER: 924479
     APP_ENV: dev
   containerPorts:
       mysql: 3306

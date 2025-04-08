@@ -1,0 +1,19 @@
+ngnix:
+  name: ngnixapp
+  labels:
+    app: ngnix
+    env: dev
+    stack: ngnix
+  image:
+    repository: msalim22/wp
+    tag: v2
+    pullPolicy: Always
+  replicas: 3
+  configmap:
+    ## KEY: "value"
+    APP_ENV: "dev"
+    WORDPRESS_DB_HOST: "wp-database.wpdb.svc.cluster.local"
+    WORDPRESS_DB_NAME: "wordpress"
+    WORDPRESS_DB_USER: "wordpress"
+  containerPorts:
+      http: 80
