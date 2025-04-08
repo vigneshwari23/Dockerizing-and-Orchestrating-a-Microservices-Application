@@ -19,11 +19,5 @@ spec:
         image: {{ .Values.ngnix.image.repository }}:{{ .Values.ngnix.image.tag }}
         imagePullPolicy: {{ .Values.ngnix.image.pullPolicy }}
         envFrom:
-          - configMapRef:
-              name: {{ .Values.ngnix.name }}-configmap
-              optional: false
-          - secretRef:
-              name: {{ .Values.ngnix.name }}-secret
-              optional: false
         ports:
         - containerPort: {{ .Values.ngnix.containerPorts.http }}
