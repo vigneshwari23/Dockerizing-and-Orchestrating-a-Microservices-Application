@@ -1,5 +1,5 @@
 ngnix:
-  name: ngnixapp
+  name: ngnix-app
   labels:
     app: ngnix
     env: dev
